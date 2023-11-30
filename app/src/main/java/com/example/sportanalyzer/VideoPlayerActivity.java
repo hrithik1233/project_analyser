@@ -3,6 +3,7 @@ package com.example.sportanalyzer;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
 import android.media.MediaCodec;
 import android.media.MediaExtractor;
 import android.media.MediaFormat;
@@ -38,7 +39,7 @@ public class VideoPlayerActivity extends AppCompatActivity implements SurfaceHol
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_videopleyer);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         surfaceView = findViewById(R.id.view);
         surfaceHolder = surfaceView.getHolder();
         surfaceHolder.addCallback(this);
